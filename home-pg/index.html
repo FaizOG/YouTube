@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="shortcut icon" href="./image/favicon_48x48.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <!-- Left Section -->
+        <div class="header__left">
+            <!-- <div class="header__menu-btn"> -->
+            <button>
+                <img src="./svg/hanburger.svg" alt="">
+            </button>
+            <!-- </div> -->
+            <div class="header__logo" title="YouTube Home">
+                <img src="./gif/yt-gif.webp" alt="">
+                <div id="country-code">IN</div>
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="header__center">
+            <div class="header__search-bar">
+                <input type="text" placeholder="Search" class="search-input">
+                <button class="search-btn" title="Search">
+                    <img src="./svg/search-icon.svg" alt="Search">
+                </button>
+            </div>
+            <div class="header__voice-search" title="Search with your voice">
+                <img src="./svg/voice-search.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="header__right">
+            <div class="header__create-btn">
+                <img src="./svg/plus.svg" alt="">
+                <p>Create</p>
+            </div>
+            <div class="header__icon-btns" title="Notifications">
+                <div id="notification-marker" hidden>
+                    <p id="notification-number">15</p>
+                </div>
+                <img src="./svg/bell.svg" alt="">
+            </div>
+            <div class="header__profile">
+                <img src="./image/profile-photo.jpg" alt="">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <div id="aside-cover">
+                <div class="sidebar__home-shortcuts">
+                    <div class="outer-div-active">
+                        <div class="img-div">
+                            <img src="./svg/home-icon.svg" alt="">
+                        </div>
+                        <p>Home</p>
+                    </div>
+                    <div class="outer-div">
+                        <div class="img-div">
+                            <img src="./svg/shorts-inactive-icon.svg" alt="">
+                        </div>
+                        <p>Shorts</p>
+                    </div>
+                </div>
+                <!-- <div class="sidebar__subscriptions">
+                    <div class="outer-div">
+                        <div class="img-div">
+                            <img src="./svg/home-icon.svg" alt="">
+                        </div>
+                        <p>Home</p>
+                    </div>
+                </div> -->
+                <!-- <div class="sidebar__library">
+
+                    <div class="outer-div heading">
+                        <p>You <span><img src="./svg/V-arrow.svg" alt=""></span></p>
+                    </div>
+
+                    <div class="outer-div">
+                        <div class="img-div">
+                            <img src="./svg/your-channel-inactive-icon.svg" alt="">
+                        </div>
+                        <p>Your Channel</p>
+                    </div>
+                </div> -->
+                <div class="sidebar__explore"></div>
+                <div class="sidebar__more-from-youtube"></div>
+                <div class="sidebar__report-history"></div>
+                <div class="sidebar__footer"></div>
+            </div>
+        </aside>
+
+        <div class="main-contant-container">
+            <nav></nav>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

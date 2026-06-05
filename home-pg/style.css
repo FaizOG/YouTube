@@ -1,3 +1,4 @@
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +16,21 @@ body {
 /* ---------- HEADER ---------- */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: black;
+  justify-content: space-between;
+  background-color: #000;
   height: 3.5rem;
   padding: 0 0.9rem;
 }
-header .header__left {
+header .header__left,
+header .header__center,
+header .header__right {
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+header .header__left {
   width: 10.82rem;
   gap: 0.4rem;
 }
@@ -34,17 +41,17 @@ header .header__left button {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  cursor: pointer;
   background: transparent;
   border: none;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .header__left button:hover {
+  background-color: rgb(81, 81, 81);
 }
 header .header__left button img {
   width: 24px;
   height: 24px;
-}
-header .header__left button:hover {
-  background-color: rgb(81, 81, 81);
 }
 header .header__left .header__logo {
   display: flex;
@@ -56,14 +63,11 @@ header .header__left .header__logo img {
 }
 header .header__left .header__logo div {
   margin-top: -1rem;
-  color: rgb(170, 170, 170);
-  font-size: 0.6rem;
   margin-left: -0.2rem;
+  font-size: 0.6rem;
+  color: rgb(170, 170, 170);
 }
 header .header__center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-width: 0;
 }
 header .header__center .header__search-bar {
@@ -73,21 +77,20 @@ header .header__center .header__search-bar {
 }
 header .header__center .header__search-bar input {
   width: 32rem;
-  min-width: 0;
   height: 2.2rem;
-  background-color: transparent;
-  padding: 0 0.25rem 0 1rem;
+  padding: 0 1rem;
   font-size: 1rem;
   font-weight: 500;
-  border: 0.05rem solid rgb(48, 48, 48);
-  border-radius: 2.5rem 0 0 2.5rem;
+  background: transparent;
+  border: 1px solid rgb(48, 48, 48);
   border-right: none;
+  border-radius: 2.5rem 0 0 2.5rem;
 }
 header .header__center .header__search-bar button {
-  height: 2.2rem;
   width: 4rem;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 0.05rem solid rgb(48, 48, 48);
+  height: 2.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgb(48, 48, 48);
   border-radius: 0 2.5rem 2.5rem 0;
   cursor: pointer;
 }
@@ -95,34 +98,30 @@ header .header__center .header__voice-search {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5rem;
   width: 2.5rem;
-  background-color: rgb(39, 39, 39);
-  border-radius: 50%;
+  height: 2.5rem;
   margin-left: 0.8rem;
-  transition: 0.3s ease;
+  border-radius: 50%;
+  background: rgb(39, 39, 39);
+  transition: 0.3s;
 }
 header .header__center .header__voice-search:hover {
-  background-color: rgb(81, 81, 81);
+  background: rgb(81, 81, 81);
 }
 header .header__right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
 }
 header .header__right .header__create-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(39, 39, 39);
-  color: white;
   height: 2.25rem;
   width: 6rem;
   border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0 1rem;
+  background: rgb(39, 39, 39);
+  color: #fff;
 }
 header .header__right .header__create-btn img {
   margin-right: 0.3rem;
@@ -131,34 +130,28 @@ header .header__right .header__icon-btns {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5rem;
   width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 header .header__right .header__icon-btns:hover {
-  background-color: rgb(39, 39, 39);
-  cursor: pointer;
+  background: rgb(39, 39, 39);
 }
 header .header__right .header__icon-btns #notification-marker {
   position: absolute;
   top: 0;
   right: -0.2rem;
-  height: 1rem;
   width: 1.4rem;
-  border-radius: 7px;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  height: 1rem;
   font-size: 0.75rem;
-}
-header .header__right .header__profile {
+  color: white;
+  border-radius: 7px;
+  background: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0.5rem;
 }
 header .header__right .header__profile img {
   height: 2rem;
@@ -185,67 +178,74 @@ header .header__right .header__profile img {
 /* ---------- MAIN ---------- */
 main {
   display: flex;
-  border-top: 1px solid gray;
-  background-color: rgb(15, 15, 15);
+  background: rgb(15, 15, 15);
 }
 main aside {
   width: 15rem;
   height: 100vh;
+  overflow-y: auto;
 }
 main aside #aside-cover {
   width: 14.5rem;
 }
 main aside {
-  /* ---------------- Sidebar Sections ---------------- */
+  /* ---------- SIDEBAR SECTIONS ---------- */
 }
 main aside .sidebar__home-shortcuts,
 main aside .sidebar__subscriptions,
 main aside .sidebar__library,
 main aside .sidebar__report-history,
 main aside .sidebar__explore,
-main aside .sidebar__more-from-youtube,
-main aside .sidebar__footer {
+main aside .sidebar__more-from-youtube {
   padding: 0.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 main aside .sidebar__home-shortcuts .outer-div,
 main aside .sidebar__home-shortcuts .outer-div-active,
+main aside .sidebar__home-shortcuts .outer-div-heading,
 main aside .sidebar__subscriptions .outer-div,
 main aside .sidebar__subscriptions .outer-div-active,
+main aside .sidebar__subscriptions .outer-div-heading,
 main aside .sidebar__library .outer-div,
 main aside .sidebar__library .outer-div-active,
+main aside .sidebar__library .outer-div-heading,
 main aside .sidebar__report-history .outer-div,
 main aside .sidebar__report-history .outer-div-active,
+main aside .sidebar__report-history .outer-div-heading,
 main aside .sidebar__explore .outer-div,
 main aside .sidebar__explore .outer-div-active,
+main aside .sidebar__explore .outer-div-heading,
 main aside .sidebar__more-from-youtube .outer-div,
 main aside .sidebar__more-from-youtube .outer-div-active,
-main aside .sidebar__footer .outer-div,
-main aside .sidebar__footer .outer-div-active {
+main aside .sidebar__more-from-youtube .outer-div-heading {
   display: flex;
   align-items: center;
-  padding: 0 0.75rem;
   width: 12.8rem;
   height: 2.5rem;
-  border-radius: 0.7rem;
+  padding: 0 0.75rem;
   font-size: 0.9rem;
-  transition: all 0.2s ease;
+  border-radius: 0.7rem;
   cursor: pointer;
+  transition: 0.2s;
 }
 main aside .sidebar__home-shortcuts .outer-div .img-div,
 main aside .sidebar__home-shortcuts .outer-div-active .img-div,
+main aside .sidebar__home-shortcuts .outer-div-heading .img-div,
 main aside .sidebar__subscriptions .outer-div .img-div,
 main aside .sidebar__subscriptions .outer-div-active .img-div,
+main aside .sidebar__subscriptions .outer-div-heading .img-div,
 main aside .sidebar__library .outer-div .img-div,
 main aside .sidebar__library .outer-div-active .img-div,
+main aside .sidebar__library .outer-div-heading .img-div,
 main aside .sidebar__report-history .outer-div .img-div,
 main aside .sidebar__report-history .outer-div-active .img-div,
+main aside .sidebar__report-history .outer-div-heading .img-div,
 main aside .sidebar__explore .outer-div .img-div,
 main aside .sidebar__explore .outer-div-active .img-div,
+main aside .sidebar__explore .outer-div-heading .img-div,
 main aside .sidebar__more-from-youtube .outer-div .img-div,
 main aside .sidebar__more-from-youtube .outer-div-active .img-div,
-main aside .sidebar__footer .outer-div .img-div,
-main aside .sidebar__footer .outer-div-active .img-div {
+main aside .sidebar__more-from-youtube .outer-div-heading .img-div {
   margin-right: 1.5rem;
 }
 main aside .sidebar__home-shortcuts .outer-div,
@@ -253,8 +253,7 @@ main aside .sidebar__subscriptions .outer-div,
 main aside .sidebar__library .outer-div,
 main aside .sidebar__report-history .outer-div,
 main aside .sidebar__explore .outer-div,
-main aside .sidebar__more-from-youtube .outer-div,
-main aside .sidebar__footer .outer-div {
+main aside .sidebar__more-from-youtube .outer-div {
   color: white;
   font-weight: 500;
 }
@@ -263,45 +262,102 @@ main aside .sidebar__subscriptions .outer-div:hover,
 main aside .sidebar__library .outer-div:hover,
 main aside .sidebar__report-history .outer-div:hover,
 main aside .sidebar__explore .outer-div:hover,
-main aside .sidebar__more-from-youtube .outer-div:hover,
-main aside .sidebar__footer .outer-div:hover {
-  background-color: rgb(39, 39, 39);
+main aside .sidebar__more-from-youtube .outer-div:hover {
+  background: rgb(39, 39, 39);
 }
 main aside .sidebar__home-shortcuts .outer-div-active,
 main aside .sidebar__subscriptions .outer-div-active,
 main aside .sidebar__library .outer-div-active,
 main aside .sidebar__report-history .outer-div-active,
 main aside .sidebar__explore .outer-div-active,
-main aside .sidebar__more-from-youtube .outer-div-active,
-main aside .sidebar__footer .outer-div-active {
+main aside .sidebar__more-from-youtube .outer-div-active {
   color: white;
   font-weight: 600;
-  background-color: rgb(39, 39, 39);
+  background: rgb(39, 39, 39);
 }
 main aside .sidebar__home-shortcuts .outer-div-active:hover,
 main aside .sidebar__subscriptions .outer-div-active:hover,
 main aside .sidebar__library .outer-div-active:hover,
 main aside .sidebar__report-history .outer-div-active:hover,
 main aside .sidebar__explore .outer-div-active:hover,
-main aside .sidebar__more-from-youtube .outer-div-active:hover,
-main aside .sidebar__footer .outer-div-active:hover {
-  background-color: rgb(61, 61, 61);
+main aside .sidebar__more-from-youtube .outer-div-active:hover {
+  background: rgb(61, 61, 61);
 }
 main aside {
-  /* Library heading */
+  /* ---------- HEADINGS ---------- */
 }
-main aside .sidebar__library .heading p,
-main aside .sidebar__subscriptions .heading p {
+main aside .heading p,
+main aside .outer-div-heading p {
   display: flex;
   align-items: center;
   font-size: 1rem;
+  font-weight: 500;
+  color: white;
 }
-main aside .sidebar__library .heading p span,
-main aside .sidebar__subscriptions .heading p span {
+main aside .heading p span,
+main aside .outer-div-heading p span {
   margin-left: 0.5rem;
 }
+main #v-face-down {
+  rotate: 90deg;
+}
+main {
+  /* ---------- SUBSCRIPTIONS LIST ---------- */
+}
+main .Subscriptions-info {
+  display: grid;
+  grid-template-columns: 2rem 1fr 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+main .Subscriptions-info .img-container img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .Subscriptions-info .channel-name {
+  font-size: 0.87rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .Subscriptions-info .something-new .blue-dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  background: rgb(62, 166, 255);
+  border-radius: 50%;
+}
+main #sidebar__explore-hidden,
+main #sidebar__Subscriptions-info-hidden {
+  display: none;
+}
+main {
+  /* ---------- FOOTER ---------- */
+}
+main .sidebar__footer {
+  padding: 0.75rem;
+}
+main .sidebar__footer p {
+  font-size: 0.8rem;
+  color: rgb(170, 170, 170);
+}
+main .sidebar__footer p span {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+main .sidebar__footer h6 {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgb(113, 113, 113);
+  font-weight: 400;
+}
+main .text-cursor {
+  cursor: text;
+}
 main .main-contant-container nav {
-  height: 100vh;
   width: 86.7vw;
+  height: 100vh;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }/*# sourceMappingURL=style.css.map */

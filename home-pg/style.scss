@@ -1,3 +1,4 @@
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -20,16 +21,19 @@ body {
 
 /* ---------- HEADER ---------- */
 header {
-  display: flex;
+  @include flex-center;
   justify-content: space-between;
-  align-items: center;
-  background-color: black;
+  background-color: #000;
   height: 3.5rem;
   padding: 0 0.9rem;
 
+  .header__left,
+  .header__center,
+  .header__right {
+    @include flex-center;
+  }
+
   .header__left {
-    display: flex;
-    align-items: center;
     width: 10.82rem;
     gap: 0.4rem;
 
@@ -38,18 +42,18 @@ header {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      cursor: pointer;
       background: transparent;
       border: none;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgb(81, 81, 81);
+      }
 
       img {
         width: 24px;
         height: 24px;
-      }
-
-      &:hover {
-        background-color: rgb(81, 81, 81);
       }
     }
 
@@ -62,15 +66,14 @@ header {
 
       div {
         margin-top: -1rem;
-        color: rgb(170, 170, 170);
-        font-size: 0.6rem;
         margin-left: -0.2rem;
+        font-size: 0.6rem;
+        color: rgb(170, 170, 170);
       }
     }
   }
 
   .header__center {
-    @include flex-center;
     min-width: 0;
 
     .header__search-bar {
@@ -78,22 +81,21 @@ header {
 
       input {
         width: 32rem;
-        min-width: 0;
         height: 2.2rem;
-        background-color: transparent;
-        padding: 0 0.25rem 0 1rem;
+        padding: 0 1rem;
         font-size: 1rem;
         font-weight: 500;
-        border: 0.05rem solid rgb(48, 48, 48);
-        border-radius: 2.5rem 0 0 2.5rem;
+        background: transparent;
+        border: 1px solid rgb(48, 48, 48);
         border-right: none;
+        border-radius: 2.5rem 0 0 2.5rem;
       }
 
       button {
-        height: 2.2rem;
         width: 4rem;
-        background-color: rgba(255, 255, 255, 0.08);
-        border: 0.05rem solid rgb(48, 48, 48);
+        height: 2.2rem;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgb(48, 48, 48);
         border-radius: 0 2.5rem 2.5rem 0;
         cursor: pointer;
       }
@@ -101,33 +103,31 @@ header {
 
     .header__voice-search {
       @include flex-center;
-      height: 2.5rem;
       width: 2.5rem;
-      background-color: rgb(39, 39, 39);
-      border-radius: 50%;
+      height: 2.5rem;
       margin-left: 0.8rem;
-      transition: 0.3s ease;
+      border-radius: 50%;
+      background: rgb(39, 39, 39);
+      transition: 0.3s;
 
       &:hover {
-        background-color: rgb(81, 81, 81);
+        background: rgb(81, 81, 81);
       }
     }
   }
 
   .header__right {
-    @include flex-center;
     gap: 0.5rem;
 
     .header__create-btn {
       @include flex-center;
-      background-color: rgb(39, 39, 39);
-      color: white;
       height: 2.25rem;
       width: 6rem;
       border-radius: 25px;
       font-size: 0.9rem;
       font-weight: 500;
-      padding: 0 1rem;
+      background: rgb(39, 39, 39);
+      color: #fff;
 
       img {
         margin-right: 0.3rem;
@@ -136,38 +136,33 @@ header {
 
     .header__icon-btns {
       @include flex-center;
-      height: 2.5rem;
       width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       position: relative;
+      cursor: pointer;
 
       &:hover {
-        background-color: rgb(39, 39, 39);
-        cursor: pointer;
+        background: rgb(39, 39, 39);
       }
 
       #notification-marker {
         position: absolute;
         top: 0;
         right: -0.2rem;
-        height: 1rem;
         width: 1.4rem;
-        border-radius: 7px;
-        background-color: red;
-        @include flex-center;
-        color: white;
+        height: 1rem;
         font-size: 0.75rem;
+        color: white;
+        border-radius: 7px;
+        background: red;
+        @include flex-center;
       }
     }
 
-    .header__profile {
-      @include flex-center;
-      margin: 0 0.5rem;
-
-      img {
-        height: 2rem;
-        border-radius: 50%;
-      }
+    .header__profile img {
+      height: 2rem;
+      border-radius: 50%;
     }
   }
 }
@@ -193,39 +188,39 @@ header {
 /* ---------- MAIN ---------- */
 main {
   display: flex;
-  border-top: 1px solid gray;
-  background-color: rgb(15, 15, 15);
+  background: rgb(15, 15, 15);
 
   aside {
     width: 15rem;
     height: 100vh;
+    overflow-y: auto;
 
     #aside-cover {
       width: 14.5rem;
     }
 
-    /* ---------------- Sidebar Sections ---------------- */
+    /* ---------- SIDEBAR SECTIONS ---------- */
     .sidebar__home-shortcuts,
     .sidebar__subscriptions,
     .sidebar__library,
     .sidebar__report-history,
     .sidebar__explore,
-    .sidebar__more-from-youtube,
-    .sidebar__footer {
+    .sidebar__more-from-youtube {
       padding: 0.75rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
       .outer-div,
-      .outer-div-active {
+      .outer-div-active,
+      .outer-div-heading {
         display: flex;
         align-items: center;
-        padding: 0 0.75rem;
         width: 12.8rem;
         height: 2.5rem;
-        border-radius: 0.7rem;
+        padding: 0 0.75rem;
         font-size: 0.9rem;
-        transition: all 0.2s ease;
+        border-radius: 0.7rem;
         cursor: pointer;
+        transition: 0.2s;
 
         .img-div {
           margin-right: 1.5rem;
@@ -237,27 +232,29 @@ main {
         font-weight: 500;
 
         &:hover {
-          background-color: rgb(39, 39, 39);
+          background: rgb(39, 39, 39);
         }
       }
 
       .outer-div-active {
         color: white;
         font-weight: 600;
-        background-color: rgb(39, 39, 39);
+        background: rgb(39, 39, 39);
 
         &:hover {
-          background-color: rgb(61, 61, 61);
+          background: rgb(61, 61, 61);
         }
       }
     }
 
-    /* Library heading */
-    .sidebar__library .heading p,
-    .sidebar__subscriptions .heading p {
+    /* ---------- HEADINGS ---------- */
+    .heading p,
+    .outer-div-heading p {
       display: flex;
       align-items: center;
       font-size: 1rem;
+      font-weight: 500;
+      color: white;
 
       span {
         margin-left: 0.5rem;
@@ -265,11 +262,77 @@ main {
     }
   }
 
-  .main-contant-container {
-    nav {
-      height: 100vh;
-      width: 86.7vw;
-      border-left: 1px solid rgba(255, 255, 255, 0.2);
+
+
+  #v-face-down {
+    rotate: 90deg;
+  }
+
+  /* ---------- SUBSCRIPTIONS LIST ---------- */
+  .Subscriptions-info {
+    display: grid;
+    grid-template-columns: 2rem 1fr 1rem;
+    align-items: center;
+    gap: 1rem;
+
+    .img-container img {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      object-fit: cover;
     }
+
+    .channel-name {
+      font-size: 0.87rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .something-new .blue-dot {
+      width: 0.25rem;
+      height: 0.25rem;
+      background: rgb(62, 166, 255);
+      border-radius: 50%;
+    }
+  }
+
+  #sidebar__explore-hidden,
+  #sidebar__Subscriptions-info-hidden {
+    display: none;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .sidebar__footer {
+    padding: 0.75rem;
+
+    p {
+      font-size: 0.8rem;
+      color: rgb(170, 170, 170);
+
+      span {
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    
+
+    h6 {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: rgb(113, 113, 113);
+      font-weight: 400;
+    }
+  }
+
+  .text-cursor {
+      cursor: text;
+    }
+
+  .main-contant-container nav {
+    width: 86.7vw;
+    height: 100vh;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
 }

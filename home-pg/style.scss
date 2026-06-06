@@ -1,4 +1,3 @@
-/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,24 +7,26 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
-/* ---------- MIXINS ---------- */
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ---------- HEADER ---------- */
 header {
   @include flex-center;
   justify-content: space-between;
-  background-color: #000;
+  background: #000;
   height: 3.5rem;
   padding: 0 0.9rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 999999;
 
   .header__left,
   .header__center,
@@ -48,12 +49,12 @@ header {
       transition: 0.3s;
 
       &:hover {
-        background-color: rgb(81, 81, 81);
+        background: rgb(81, 81, 81);
       }
 
       img {
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
 
@@ -65,8 +66,7 @@ header {
       }
 
       div {
-        margin-top: -1rem;
-        margin-left: -0.2rem;
+        margin: -1rem 0 0 -0.2rem;
         font-size: 0.6rem;
         color: rgb(170, 170, 170);
       }
@@ -121,13 +121,14 @@ header {
 
     .header__create-btn {
       @include flex-center;
-      height: 2.25rem;
       width: 6rem;
+      height: 2.25rem;
       border-radius: 25px;
       font-size: 0.9rem;
       font-weight: 500;
       background: rgb(39, 39, 39);
       color: #fff;
+      cursor: pointer;
 
       img {
         margin-right: 0.3rem;
@@ -153,7 +154,7 @@ header {
         width: 1.4rem;
         height: 1rem;
         font-size: 0.75rem;
-        color: white;
+        color: #fff;
         border-radius: 7px;
         background: red;
         @include flex-center;
@@ -167,25 +168,23 @@ header {
   }
 }
 
-/* ---------- SCROLLBAR ---------- */
 ::-webkit-scrollbar {
-  width: 8px;
-}
+  width: 0.5rem;
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+  &-track {
+    background: transparent;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(96, 96, 96, 0.8);
-  border-radius: 999px;
+  &-thumb {
+    background: rgba(96, 96, 96, 0.8);
+    border-radius: 999px;
 
-  &:hover {
-    background: rgba(120, 120, 120, 0.9);
+    &:hover {
+      background: rgba(120, 120, 120, 0.9);
+    }
   }
 }
 
-/* ---------- MAIN ---------- */
 main {
   display: flex;
   background: rgb(15, 15, 15);
@@ -199,7 +198,6 @@ main {
       width: 14.5rem;
     }
 
-    /* ---------- SIDEBAR SECTIONS ---------- */
     .sidebar__home-shortcuts,
     .sidebar__subscriptions,
     .sidebar__library,
@@ -260,15 +258,29 @@ main {
         margin-left: 0.5rem;
       }
     }
+
+    .sidebar__footer {
+      padding: 0.75rem;
+
+      p {
+        font-size: 0.8rem;
+        color: rgb(170, 170, 170);
+
+        span {
+          margin-right: 0.5rem;
+          cursor: pointer;
+        }
+      }
+
+      h6 {
+        margin-top: 1rem;
+        font-size: 0.75rem;
+        color: rgb(113, 113, 113);
+        font-weight: 400;
+      }
+    }
   }
 
-
-
-  #v-face-down {
-    rotate: 90deg;
-  }
-
-  /* ---------- SUBSCRIPTIONS LIST ---------- */
   .Subscriptions-info {
     display: grid;
     grid-template-columns: 2rem 1fr 1rem;
@@ -302,37 +314,27 @@ main {
     display: none;
   }
 
-  /* ---------- FOOTER ---------- */
-  .sidebar__footer {
-    padding: 0.75rem;
-
-    p {
-      font-size: 0.8rem;
-      color: rgb(170, 170, 170);
-
-      span {
-        margin-right: 0.5rem;
-        cursor: pointer;
-      }
-    }
-
-    
-
-    h6 {
-      margin-top: 1rem;
-      font-size: 0.75rem;
-      color: rgb(113, 113, 113);
-      font-weight: 400;
-    }
+  .text-cursor {
+    cursor: text;
   }
 
-  .text-cursor {
-      cursor: text;
-    }
+  .v-face-down {
+    rotate: 90deg;
+  }
 
-  .main-contant-container nav {
+  .main-contant-container {
     width: 86.7vw;
     height: 100vh;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
+
+    // nav {
+    //   height: 3.25rem;
+    //   background-color: red;
+    //   // width: 100%;
+    // }
   }
+  // .random {
+  //     height: 150px;
+  //     background-color: #fff;
+  //   }
 }

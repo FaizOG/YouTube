@@ -19,10 +19,12 @@
                 <img src="./svg/hanburger.svg" alt="">
             </button>
             <!-- </div> -->
+             <a href="index.html">
             <div class="header__logo" title="YouTube Home">
                 <img src="./gif/yt-gif.webp" alt="">
                 <div id="country-code">IN</div>
             </div>
+            </a>
         </div>
 
         <!-- Middle Section -->
@@ -54,7 +56,6 @@
                 <img src="./image/profile-photo.jpg" alt="">
             </div>
         </div>
-        <script src="script.js"></script>
     </header>
     <main>
         <aside class="sidebar">
@@ -63,7 +64,7 @@
                 <div class="sidebar__home-shortcuts">
                     <div class="outer-div-active">
                         <div class="img-div">
-                            <img src="./svg/home-inactive-icon.svg" alt="">
+                            <img src="./svg/home-active-icon.svg" alt="">
                         </div>
                         <p>Home</p>
                     </div>
@@ -79,162 +80,15 @@
                     <div class="outer-div heading">
                         <p>Subscriptions <span><img src="./svg/V-arrow.svg" alt=""></span></p>
                     </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/Inosuke-Recap.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>Inosuke Recap</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot" hidden></div>
-                            </div>
-                        </div>
+                    <div class="sidebar__Subscriptions-info-show">
+                        <!-- Using JS to add code here -->
                     </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/Manhwa-Apex.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>Manhwa Apex</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/Abou-Toure.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>Abou Toure</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/Shreshth-Kaushik.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>Shreshth Kaushik</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot" hidden></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/Visual-Venture.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>Visual Venture</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/GB-Voice-Academy.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>GB Voice Academy</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="Subscriptions-info">
-                            <div class="img-container">
-                                <img src="./image/home-page-aside-Subscriptions/Sunny-Mosam.jpg" alt="">
-                            </div>
-                            <div class="channel-name">
-                                <p>Sunny Mosam</p>
-                            </div>
-                            <div class="something-new">
-                                <div class="blue-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="outer-div">
+                    <div class="outer-div show-more-Subscriptions">
                         <div class="img-div">
-                            <img id="v-face-down" src="./svg/V-arrow.svg" alt="">
+                            <img class="v-face-down" id="SubscriptionsV" src="./svg/V-arrow.svg" alt="">
                         </div>
-                        <p>Show more</p>
+                        <p id="SubscriptionsPara">Show more</p>
                     </div>
-
-                    <div id="sidebar__Subscriptions-info-hidden">
-
-                        <div class="outer-div">
-                            <div class="Subscriptions-info">
-                                <div class="img-container">
-                                    <img src="./image/home-page-aside-Subscriptions/Aisha-Sultan.jpg" alt="">
-                                </div>
-                                <div class="channel-name">
-                                    <p>Aisha Sultan</p>
-                                </div>
-                                <div class="something-new">
-                                    <div class="blue-dot"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        #v-face-down {
-                        rotate: 90deg;
-                        }
-
-                        <div class="outer-div">
-                            <div class="Subscriptions-info">
-                                <div class="img-container">
-                                    <img src="./image/home-page-aside-Subscriptions/ImportedMaple.jpg" alt="">
-                                </div>
-                                <div class="channel-name">
-                                    <p>ImportedMaple</p>
-                                </div>
-                                <div class="something-new">
-                                    <div class="blue-dot"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="Subscriptions-info">
-                                <div class="img-container">
-                                    <img src="./image/home-page-aside-Subscriptions/Interactive-English.jpg" alt="">
-                                </div>
-                                <div class="channel-name">
-                                    <p>Interactive English</p>
-                                </div>
-                                <div class="something-new">
-                                    <div class="blue-dot"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
 
 
@@ -244,53 +98,8 @@
                         <p>You <span><img src="./svg/V-arrow.svg" alt=""></span></p>
                     </div>
 
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/your-channel-inactive-icon.svg" alt="">
-                        </div>
-                        <p>Your Channel</p>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/history-icon.svg" alt="">
-                        </div>
-                        <p>History</p>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/playlist-inactive-icon.svg" alt="">
-                        </div>
-                        <p>Playlist</p>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/watch-later-inactive-icon.svg" alt="">
-                        </div>
-                        <p>Watch later</p>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/liked-videos-inactive-icon.svg" alt="">
-                        </div>
-                        <p>Linked videos</p>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/your-videos-inactive-icon.svg" alt="">
-                        </div>
-                        <p>Your videos</p>
-                    </div>
-
-                    <div class="outer-div">
-                        <div class="img-div">
-                            <img src="./svg/downloads-icon-inactive-icon.svg" alt="">
-                        </div>
-                        <p>Downloads</p>
+                    <div class="sidebar__library-info-show">
+                        <!-- Using JS to add code here -->
                     </div>
                 </div>
 
@@ -300,97 +109,15 @@
                         <p class="text-cursor">Explore</p>
                     </div>
 
-                    <div class="show-upfrount">
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/shopping-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Shopping</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/music-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Music</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/movies-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Movies</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img id="v-face-down" src="./svg/V-arrow.svg" alt="">
-                            </div>
-                            <p>Show more</p>
-                        </div>
+                    <div class="sidebar__explore-show-upfrount">
+                        <!-- Using JS to add code here -->
                     </div>
 
-                    <!-- <div id="sidebar__explore-hidden">
-                        
-                    </div> -->
-
-                    <div id="sidebar__explore-hidden">
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/live-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Live</p>
+                    <div class="outer-div show-more-Explore">
+                        <div class="img-div">
+                            <img class="v-face-down" src="./svg/V-arrow.svg" alt="">
                         </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/gaming-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Gaming</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/news-inactive-icon.svg" alt="">
-                            </div>
-                            <p>News</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/sports-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Sports</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/cources-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Courses</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/Fashion-&-Beauty-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Fashion & Beauty</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/podcasts-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Podcasts</p>
-                        </div>
-
-                        <div class="outer-div">
-                            <div class="img-div">
-                                <img src="./svg/home-page-aside-Explore/Playables-inactive-icon.svg" alt="">
-                            </div>
-                            <p>Playables</p>
-                        </div>
+                        <p id="ExplorePara">Show more</p>
                     </div>
 
                 </div>
@@ -447,11 +174,16 @@
         </aside>
 
         <div class="main-contant-container">
-            <nav></nav>
-            ''
+            <nav>
+
+            </nav>
+
+            <div class="random">
+
+            </div>
         </div>
     </main>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     height="24"
+     viewBox="0 0 24 24"
+     width="24"
+     fill="#ffffff"
+     focusable="false"
+     aria-hidden="true"
+     style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+  <path d="M19 5H8a1 1 0 000 2h7.586L5.293 17.293a1 1 0 101.414 1.414L17 8.414V16a1 1 0 002 0V5Z"/>
+</svg>

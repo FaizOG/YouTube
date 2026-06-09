@@ -7,6 +7,12 @@
     <title>YouTube</title>
     <link rel="shortcut icon" href="./image/favicon_48x48.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Roboto Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,11 +25,11 @@
                 <img src="./svg/hanburger.svg" alt="">
             </button>
             <!-- </div> -->
-             <a href="index.html">
-            <div class="header__logo" title="YouTube Home">
-                <img src="./gif/yt-gif.webp" alt="">
-                <div id="country-code">IN</div>
-            </div>
+            <a href="index.html">
+                <div class="header__logo" title="YouTube Home">
+                    <img src="./gif/yt-gif.webp" alt="">
+                    <div id="country-code">IN</div>
+                </div>
             </a>
         </div>
 
@@ -90,7 +96,6 @@
                         <p id="SubscriptionsPara">Show more</p>
                     </div>
                 </div>
-
 
                 <div class="sidebar__library">
 
@@ -174,16 +179,21 @@
         </aside>
 
         <div class="main-contant-container">
-            <nav>
-
+            <nav id="category-scroll">
+                <div class="category-active">
+                    All
+                </div>
+                <div class="inactive-category">
+                    <!-- Code Will be push using JS -->
+                </div>
             </nav>
 
-            <div class="random">
-
+            <div id="main-video-content">
+                <!-- Content will  -->
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
